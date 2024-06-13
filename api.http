@@ -1,0 +1,59 @@
+GET http://localhost:3000/users
+
+### Usuario comum
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "test2@test.com",
+    "password": "123456"
+}
+
+### Usuario partner
+POST http://localhost:3000/partners/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "test3@test.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "test1@test.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3000/partners
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ0ZXN0M0B0ZXN0LmNvbSIsInJvbGVzIjpbIlBBUlRORVIiXSwiY3JlYXRlZEF0IjoiMjAyNC0wNi0xM1QwMDozMzoyNS40NDJaIiwidXBkYXRlZEF0IjoiMjAyNC0wNi0xM1QwMDozMzoyNS40NDJaIiwiaWF0IjoxNzE4MjM4ODI2LCJleHAiOjE3MTgyNDg4MjZ9.jUHut6CX44M3gUAw9dsslp6wmLCz1Dhl3azBh5aX3eU
+
+{
+    "name": "partner 2"
+}
+
+###
+GET http://localhost:3000/partners
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ0ZXN0NEB0ZXN0LmNvbSIsInJvbGVzIjpbIlBBUlRORVIiXSwiY3JlYXRlZEF0IjoiMjAyNC0wNi0xMlQyMzoyMTozNC42MDFaIiwidXBkYXRlZEF0IjoiMjAyNC0wNi0xMlQyMzoyMTozNC42MDFaIiwiaWF0IjoxNzE4MjM2Mjc5LCJleHAiOjE3MTgyNDYyNzl9.CKSttG0PXJTbVyfI5uGZuv_T74P7XX9M64RSBOZPTmc
+
+
+###
+POST http://localhost:3000/events
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ0ZXN0M0B0ZXN0LmNvbSIsInJvbGVzIjpbIlBBUlRORVIiXSwiY3JlYXRlZEF0IjoiMjAyNC0wNi0xM1QwMDozMzoyNS40NDJaIiwidXBkYXRlZEF0IjoiMjAyNC0wNi0xM1QwMDozMzoyNS40NDJaIiwiaWF0IjoxNzE4MjM4ODI2LCJleHAiOjE3MTgyNDg4MjZ9.jUHut6CX44M3gUAw9dsslp6wmLCz1Dhl3azBh5aX3eU
+Content-Type: application/json
+
+{
+    "name": "Evento 1",
+    "description": "Evento 1",
+    "date": "2024-06-12T23:21:34.60"
+}
+
+###
+GET http://localhost:3000/events
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInJvbGVzIjpbIlVTRVIiXSwiY3JlYXRlZEF0IjoiMjAyNC0wNi0xM1QwMDozMToyNS41NzRaIiwidXBkYXRlZEF0IjoiMjAyNC0wNi0xM1QwMDozMToyNS41NzRaIiwiaWF0IjoxNzE4MjM5NzY1LCJleHAiOjE3MTgyNDk3NjV9.tzz502l4sLmguHQzZzKJzFqFCupJvFs4SjNnhATb5rA
